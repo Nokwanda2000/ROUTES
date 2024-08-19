@@ -11,13 +11,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
  
+ 
   return (
     <>
     <BrowserRouter>
     <Routes>
       <Route path='/' element={<Display />}
       ></Route>
-      <Route index element={<Home />}></Route>
+      <Route index element={<Home add={Display} />}></Route>
       <Route path='/login' element={<Login/>}></Route>
       <Route path="/add" element={<Add/>}></Route>
       <Route path='/test' element={<Test/>}></Route>

@@ -1,7 +1,8 @@
 function Login(){
     return(
         <>
-        <button>Login</button>
+        <h1>Login Page</h1>
+        <button>Go to home page</button>
         </>
     )
 }

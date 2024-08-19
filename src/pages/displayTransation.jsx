@@ -29,20 +29,28 @@ function Display() {
   return (
     <div className="container">
       <h1>History of your transaction</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Amount</th>
-            <th>Type</th>
-          </tr>
-        </thead>
-        <tbody>
+      <table style={{
+        width:"100%",
+
+        
+
+      }}>
+       
+        <tbody style={{
+      
+          height: "80px",
+          padding: "10px",
+          borderRadius: "3px",
+          width: "100%",
+          // marginBottom: "10px",
+          backgroundColor:"whitesmoke"
+          
+        }}>
           {transactions.map((transaction, index) => (
             <tr key={index}>
               <td>{transaction.name}</td>
               <td>{transaction.amount}</td>
-              <td>{transaction.type}</td>
+              {/* <td>{transaction.type}</td> */}
             </tr>
           ))}
         </tbody>
@@ -57,16 +65,18 @@ function Display() {
           name="name"
           value={newTransaction.name}
           onChange={handleInputChange}
+          placeholder="Enter Item"
         />
       </div>
       <div>
-        <label htmlFor="amount" aria-placeholder="enter amount"></label>
+        <label htmlFor="amount" ></label>
         <input
           type="number"
           id="amount"
           name="amount"
           value={newTransaction.amount}
           onChange={handleInputChange}
+          placeholder="Enter amount"
         />
       </div>
       <div style={{
@@ -86,7 +96,7 @@ function Display() {
       <button style={{
         width:"200px",
         height:"30px",
-        marginRight:"100px",
+        marginLeft:"50px"
         // backgroundColor:"blue",
         // color:"white"
       }} onClick={addTransaction}>Add a transaction</button>
