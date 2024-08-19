@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-
+import Home from "./home";
 import '/src/App.css'
+
 function Display() {
   const [transactions, setTransactions] = useState([
     { name: "Salary", amount: 15000, type: "income" },
@@ -100,6 +101,7 @@ function Display() {
         // backgroundColor:"blue",
         // color:"white"
       }} onClick={addTransaction}>Add a transaction</button>
+     
     </div>
   );
 }

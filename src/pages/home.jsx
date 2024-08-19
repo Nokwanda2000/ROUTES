@@ -1,18 +1,16 @@
 import {useNavigate} from 'react-router-dom';
 import Display from './displayTransation';
+import React from 'react';
 import Add from './add';
-function Home(){
+function Home(props){
     const history = useNavigate();
-    const gotoLogin =()=>{
-                // history.push('./login.jsx')
-                history.push("./login.jsx")
-    }
+    
     return(
         <>
         <h1>Home</h1>
-        <button onClick={gotoLogin}>Go to Login</button>
-        <Display/>
-        <Add/>
+        <button onClick={()=>history("./displayTransation")}>Go to Login</button>
+        {/* <Display/>
+        <Add/> */}
         
         </>
     )
